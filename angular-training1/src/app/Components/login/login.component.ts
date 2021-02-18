@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -6,23 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
-  user:any ={
+   user = {
     userName: "",
     password: ""
   }
-  data: any={
-    userName: "",
-    password: ""
-  };
-  
+
+  constructor(private _router: Router){}
+
   formSubmit(){
-    this.data.userName = this.user.userName 
-    this.data.password = this.user.password
-    
-    
-   this.user= {};
-
+    let un = this.user.userName;
+    let pw = this.user.password;
+    if(un ==  "Ahmad" &&  pw == "hello"){
+      this._router.navigate(["/home"])
+    }
   }
-
 }

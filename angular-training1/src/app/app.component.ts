@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-training1';
+  userName = ""; 
+  password= "";
+  ChangeTitle(){
+    this.title= this.userName;
+    console.log(this.userName," ",  this.password)
+  }
+  
 }

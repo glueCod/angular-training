@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './Components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './Components/home/home.component';
+import { ChildComponent } from './Components/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

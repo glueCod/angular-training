@@ -4,8 +4,11 @@
     <div class="col-md mt-5">
      <form #loginForm="ngForm" (ngSubmit)="formSubmit()">
          <label for="userName">User Name</label>
-         <input #userName="ngModel" name="userName" type="text" 
-         class="form-control col-8 mb-3" required [(ngModel)]="user.userName"
+         <input 
+         
+        #userName="ngModel" name="userName" type="text" 
+         class="form-control col-8 mb-3" 
+         required [(ngModel)]="user.userName"
          maxlength="10" minlength="5">
          <div *ngIf="!userName.valid && (userName.dirty || userName.touched)"
          class="alert alert-danger">User is required.</div>

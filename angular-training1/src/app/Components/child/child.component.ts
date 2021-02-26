@@ -16,7 +16,7 @@ export class ChildComponent implements OnInit {
   getCountry(){
     this.countries = this.service.getCountries();
     const id: number = this.route.snapshot.params.id ;
-    this.country = this.countries.find((country:any, index: number)=>{
+    this.country = this.countries.find((country:any)=>{
       return country.id == id;  
     });  
     console.log(this.country.name);
@@ -24,7 +24,5 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCountry();
-  }
-
-  
+  } 
 }

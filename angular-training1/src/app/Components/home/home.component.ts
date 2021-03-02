@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router,} from '@angular/router';
 import {AppService} from "../../services/app.service";
-import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'home',
@@ -17,7 +16,8 @@ export class HomeComponent implements OnInit {
    {name: "NA", url: "../../../assets/Namibia.jpg"},
    {name: "GH", url: "../../../assets/Ghana.jpg"}
   ]
- countries: any = [];
+  countries: any = [];
+  searchValue!: string
 constructor(
    private router: Router,
    private route: ActivatedRoute,
@@ -30,5 +30,4 @@ constructor(
   this.countries = this.service.getCountries();
   console.log(this.countries); 
   }
-  
 }
